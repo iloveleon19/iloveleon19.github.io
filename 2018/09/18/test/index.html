@@ -77,18 +77,18 @@
 
 
 
-<meta name="description" content="標題這是為了測試而存在的文章 副標題 測試一  引用測試   程式碼測試  1phpinfo();  exit;  斜體  粗體  粗斜體  刪除線     @mentions, #refs, links, formatting, and tags supported  list syntax required (any unordered or ordered list supported)">
+<meta name="description" content="標題這是為了測試而存在的文章">
 <meta name="keywords" content="test">
 <meta property="og:type" content="article">
 <meta property="og:title" content="測試">
 <meta property="og:url" content="http://yoursite.com/2018/09/18/test/index.html">
 <meta property="og:site_name" content="iloveleon19">
-<meta property="og:description" content="標題這是為了測試而存在的文章 副標題 測試一  引用測試   程式碼測試  1phpinfo();  exit;  斜體  粗體  粗斜體  刪除線     @mentions, #refs, links, formatting, and tags supported  list syntax required (any unordered or ordered list supported)">
+<meta property="og:description" content="標題這是為了測試而存在的文章">
 <meta property="og:locale" content="zh-tw">
-<meta property="og:updated_time" content="2018-09-18T14:48:05.337Z">
+<meta property="og:updated_time" content="2018-09-24T14:38:30.135Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="測試">
-<meta name="twitter:description" content="標題這是為了測試而存在的文章 副標題 測試一  引用測試   程式碼測試  1phpinfo();  exit;  斜體  粗體  粗斜體  刪除線     @mentions, #refs, links, formatting, and tags supported  list syntax required (any unordered or ordered list supported)">
+<meta name="twitter:description" content="標題這是為了測試而存在的文章">
 
 
 
@@ -298,6 +298,17 @@
 
           
           
+             <span id="/2018/09/18/test/" class="leancloud_visitors" data-flag-title="測試">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">閱讀次數&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
 
           
 
@@ -319,6 +330,7 @@
 
       
         <h1 id="標題"><a href="#標題" class="headerlink" title="標題"></a>標題</h1><p>這是為了測試而存在的文章</p>
+<a id="more"></a>
 <h2 id="副標題"><a href="#副標題" class="headerlink" title="副標題"></a>副標題</h2><ol>
 <li><p>測試一</p>
 <blockquote>
@@ -735,6 +747,113 @@ cond(no)->op</textarea><textarea id="flowchart-0-options" style="display: none">
 
 
   
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
+  <script>AV.initialize("xAK26TFFW6tIb7I0bWGR2nRn-gzGzoHsz", "asHEy35Q4FwON9YNnKjdXsTd");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
 
   
 
