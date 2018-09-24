@@ -80,14 +80,14 @@
 <meta name="description" content="在文章內設置 &amp;lt;!--more--&amp;gt; 標籤即可 /themes/next/_config.yml 的 scroll_to_more 選項要設定為 false， 不然點擊 閱讀全文 之後會從該錨點開始顯示，而非文章的文首開始顯示">
 <meta name="keywords" content="hexo">
 <meta property="og:type" content="article">
-<meta property="og:title" content="hexo 的 *閱讀全文* 設置">
+<meta property="og:title" content="hexo 的 閱讀全文 設置">
 <meta property="og:url" content="http://yoursite.com/2018/09/24/hexo-read-more/index.html">
 <meta property="og:site_name" content="iloveleon19">
 <meta property="og:description" content="在文章內設置 &amp;lt;!--more--&amp;gt; 標籤即可 /themes/next/_config.yml 的 scroll_to_more 選項要設定為 false， 不然點擊 閱讀全文 之後會從該錨點開始顯示，而非文章的文首開始顯示">
 <meta property="og:locale" content="zh-tw">
-<meta property="og:updated_time" content="2018-09-24T15:39:17.463Z">
+<meta property="og:updated_time" content="2018-09-24T15:41:34.286Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="hexo 的 *閱讀全文* 設置">
+<meta name="twitter:title" content="hexo 的 閱讀全文 設置">
 <meta name="twitter:description" content="在文章內設置 &amp;lt;!--more--&amp;gt; 標籤即可 /themes/next/_config.yml 的 scroll_to_more 選項要設定為 false， 不然點擊 閱讀全文 之後會從該錨點開始顯示，而非文章的文首開始顯示">
 
 
@@ -124,7 +124,7 @@
 
 
 
-  <title>hexo 的 *閱讀全文* 設置 | iloveleon19</title>
+  <title>hexo 的 閱讀全文 設置 | iloveleon19</title>
   
 
 
@@ -268,7 +268,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">hexo 的 *閱讀全文* 設置</h1>
+          <h1 class="post-title" itemprop="name headline">hexo 的 閱讀全文 設置</h1>
         
 
         <div class="post-meta">
@@ -298,7 +298,7 @@
 
           
           
-             <span id="/2018/09/24/hexo-read-more/" class="leancloud_visitors" data-flag-title="hexo 的 *閱讀全文* 設置">
+             <span id="/2018/09/24/hexo-read-more/" class="leancloud_visitors" data-flag-title="hexo 的 閱讀全文 設置">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -314,14 +314,6 @@
 
           
 
-          
-
-
-          
-          &nbsp; | &nbsp;
-          <span id="/2018/09/24/hexo-read-more/"class="leancloud_visitors" data-flag-title="hexo 的 *閱讀全文* 設置">
-                  &nbsp;閱讀次數
-                  </span>
           
 
         </div>
@@ -541,91 +533,6 @@
       </div>
     
 
-    
-
-    
-      <!-- custom analytics part create by xiamo -->
-<script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
-<script>AV.initialize("xAK26TFFW6tIb7I0bWGR2nRn-gzGzoHsz", "asHEy35Q4FwON9YNnKjdXsTd");</script>
-<script>
-function showTime(Counter) {
-	var query = new AV.Query(Counter);
-	$(".leancloud_visitors").each(function() {
-		var url = $(this).attr("id").trim();
-		query.equalTo("url", url);
-		query.find({
-			success: function(results) {
-				if (results.length == 0) {
-					var content = '0 ' + $(document.getElementById(url)).text();
-					$(document.getElementById(url)).text(content);
-					return;
-				}
-				for (var i = 0; i < results.length; i++) {
-					var object = results[i];
-					var content = object.get('time') + ' ' + $(document.getElementById(url)).text();
-					$(document.getElementById(url)).text(content);
-				}
-			},
-			error: function(object, error) {
-				console.log("Error: " + error.code + " " + error.message);
-			}
-		});
-
-	});
-}
-
-function addCount(Counter) {
-	var Counter = AV.Object.extend("Counter");
-	url = $(".leancloud_visitors").attr('id').trim();
-	title = $(".leancloud_visitors").attr('data-flag-title').trim();
-	var query = new AV.Query(Counter);
-	query.equalTo("url", url);
-	query.find({
-		success: function(results) {
-			if (results.length > 0) {
-				var counter = results[0];
-				counter.fetchWhenSave(true);
-				counter.increment("time");
-				counter.save(null, {
-					success: function(counter) {
-						var content =  counter.get('time') + ' ' + $(document.getElementById(url)).text();
-						$(document.getElementById(url)).text(content);
-					},
-					error: function(counter, error) {
-						console.log('Failed to save Visitor num, with error message: ' + error.message);
-					}
-				});
-			} else {
-				var newcounter = new Counter();
-				newcounter.set("title", title);
-				newcounter.set("url", url);
-				newcounter.set("time", 1);
-				newcounter.save(null, {
-					success: function(newcounter) {
-					    console.log("newcounter.get('time')="+newcounter.get('time'));
-						var content = newcounter.get('time') + ' ' + $(document.getElementById(url)).text();
-						$(document.getElementById(url)).text(content);
-					},
-					error: function(newcounter, error) {
-						console.log('Failed to create');
-					}
-				});
-			}
-		},
-		error: function(error) {
-			console.log('Error:' + error.code + " " + error.message);
-		}
-	});
-}
-$(function() {
-	var Counter = AV.Object.extend("Counter");
-	if ($('.leancloud_visitors').length == 1) {
-		addCount(Counter);
-	} else if ($('.post-title-link').length > 1) {
-		showTime(Counter);
-	}
-}); 
-</script>
     
 
   </div>
