@@ -43,3 +43,5 @@ st->op->cond
 cond(yes)->e
 cond(no)->op
 ```
+
+8. 備份後的發佈測試
