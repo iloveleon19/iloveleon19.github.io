@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>iloveleon19</title>
+  
+  
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://yoursite.com/"/>
+  <updated>2018-09-24T14:39:08.552Z</updated>
+  <id>http://yoursite.com/</id>
+  
+  <author>
+    <name>iloveleon19</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="http://yoursite.com/2018/09/26/hello-world/"/>
+    <id>http://yoursite.com/2018/09/26/hello-world/</id>
+    <published>2018-09-26T14:18:09.697Z</published>
+    <updated>2018-09-24T14:39:08.552Z</updated>
+    
+    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><a id="more"></a><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;documentation&lt;/a&gt; for more info. If you get any problems when using Hexo, you can find the answer in &lt;a href=&quot;https://hexo.io/docs/troubleshooting.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;troubleshooting&lt;/a&gt; or you can ask me on &lt;a href=&quot;https://github.com/hexojs/hexo/issues&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>hexo 的 閱讀全文 設置</title>
+    <link href="http://yoursite.com/2018/09/24/hexo-read-more/"/>
+    <id>http://yoursite.com/2018/09/24/hexo-read-more/</id>
+    <published>2018-09-24T15:31:45.000Z</published>
+    <updated>2018-09-24T15:43:18.745Z</updated>
+    
+    <content type="html"><![CDATA[<p>在文章內設置 <code>&lt;!--more--&gt;</code> 標籤即可</p><p>/themes/next/_config.yml 的 scroll_to_more 選項要設定為 false</p><p>不然點擊 <em>閱讀全文</em> 之後會從該錨點開始顯示，而非文章的文首開始顯示</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;在文章內設置 &lt;code&gt;&amp;lt;!--more--&amp;gt;&lt;/code&gt; 標籤即可&lt;/p&gt;
+&lt;p&gt;/themes/next/_config.yml 的 scroll_to_more 選項要設定為 false&lt;/p&gt;
+&lt;p&gt;不然點擊 &lt;em&gt;閱讀全文&lt;/em&gt; 之後會從該錨
+      
+    
+    </summary>
+    
+    
+      <category term="hexo" scheme="http://yoursite.com/tags/hexo/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>extJS 3.4：PagingToolbar 搭配 MemoryProxy</title>
+    <link href="http://yoursite.com/2018/09/24/extJS-PagingToolbar/"/>
+    <id>http://yoursite.com/2018/09/24/extJS-PagingToolbar/</id>
+    <published>2018-09-24T02:21:01.000Z</published>
+    <updated>2018-09-24T14:39:33.896Z</updated>
+    
+    <content type="html"><![CDATA[<p>在使用 PagingToolbar 不論你使用哪種 Proxy 得到資料，後端的資料結構都應該是一個 JSON 格式  </p><p>JSON 裡面包含目前這個分頁要呈現的資料 <code>$returnResult[&#39;rows&#39;]</code> 對應到 reader 的 root  </p><p>及全部的資料數量 <code>$returnResult[&#39;results&#39;]</code> 對應到 reader 的 totalProperty  </p><p>讓 PagingToolbar 知道該如何分頁</p><a id="more"></a><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// GetDBdata.php</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// ...</span></span><br><span class="line"><span class="comment">// some code to process data</span></span><br><span class="line"><span class="comment">// ...</span></span><br><span class="line"></span><br><span class="line">$returnResult[<span class="string">'rows'</span>] = $resultArray;</span><br><span class="line">$returnResult[<span class="string">'results'</span>] = $totalCount;</span><br><span class="line"></span><br><span class="line">$rtn = json_encode($returnResult);</span><br><span class="line"><span class="keyword">return</span> $rtn;</span><br></pre></td></tr></table></figure><p>當使用 Ext.data.MemoryProxy 作為 store 的 proxy 時，要更新資料可以直接把資料寫入 store.proxy.data  </p><p>再藉由 store.load() 刷新資料</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// main.js</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> limitRow = <span class="number">25</span>; <span class="comment">// server script should only send back 25 items at a time</span></span><br><span class="line"><span class="keyword">var</span> startRow = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> drawColumns = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    Ext.QuickTips.init();</span><br><span class="line">    Ext.QuickTips.getQuickTip().dismissDelay = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">    store = <span class="keyword">new</span> Ext.data.GroupingStore(&#123;</span><br><span class="line">        proxy: <span class="keyword">new</span> Ext.data.MemoryProxy(),</span><br><span class="line">        pageSize: limitRow,</span><br><span class="line">        reader: getReader(),</span><br><span class="line">        sortInfo: &#123; <span class="attr">field</span>: <span class="string">'date'</span>, <span class="attr">direction</span>: <span class="string">'DESC'</span> &#125;,</span><br><span class="line">        enablePaging: <span class="literal">true</span></span><br><span class="line">    &#125;);</span><br><span class="line"></span><br><span class="line">     grid = <span class="keyword">new</span> Ext.grid.GridPanel(&#123;</span><br><span class="line">            tbar: <span class="keyword">new</span> Ext.PagingToolbar(&#123;</span><br><span class="line">            store: store,       <span class="comment">// grid and PagingToolbar using same store</span></span><br><span class="line">            displayInfo: <span class="literal">true</span>,</span><br><span class="line">            pageSize: limitRow,</span><br><span class="line">            prependButtons: <span class="literal">true</span>,</span><br><span class="line">            listeners: &#123;</span><br><span class="line">                beforechange: <span class="function"><span class="keyword">function</span>(<span class="params">pagingtoolbar,pageData</span>)</span>&#123; <span class="comment">// 點擊換頁時再去要資料</span></span><br><span class="line">                    startRow = pageData.start;</span><br><span class="line">                    limitRow = pageData.limit;</span><br><span class="line">                    doGetData();</span><br><span class="line">                &#125;,</span><br><span class="line">                <span class="comment">// change: function(pagingtoolbar,pageData)&#123;</span></span><br><span class="line">                <span class="comment">// &#125;,</span></span><br><span class="line">            &#125;,</span><br><span class="line">        &#125;),</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> getReader = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> r = [<span class="string">'id'</span>,<span class="string">'name'</span>,<span class="string">'date'</span>];</span><br><span class="line">    <span class="keyword">var</span> reader = <span class="keyword">new</span> Ext.data.JsonReader(&#123;</span><br><span class="line">        root: <span class="string">'rows'</span>,</span><br><span class="line">        totalProperty:<span class="string">'results'</span>,</span><br><span class="line">        fields: r,</span><br><span class="line">    &#125;);</span><br><span class="line">    <span class="keyword">return</span> reader;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> doGetData = <span class="function"><span class="keyword">function</span>(<span class="params">jdata</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> p = &#123;</span><br><span class="line">        <span class="string">"uid"</span>       : uid,</span><br><span class="line">        <span class="string">"startRow"</span>  : startRow,</span><br><span class="line">        <span class="string">"limitRow"</span>  : limitRow,</span><br><span class="line">    &#125;;</span><br><span class="line">    MyFunction.Send(<span class="string">"GetDBdata"</span>, p, LoadData, <span class="keyword">this</span>); <span class="comment">// 到 GetDBdata.php 取得資料，交給 LoadData 載入資料</span></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> LoadData = <span class="function"><span class="keyword">function</span>(<span class="params">jdata</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> ds = jdata || [];</span><br><span class="line">    store.proxy.data = ds;</span><br><span class="line">    store.load(&#123;</span><br><span class="line">        params: &#123;</span><br><span class="line">            <span class="comment">// specify params for the first page load if using paging</span></span><br><span class="line">            start: startRow,</span><br><span class="line">            limit: limitRow,</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;在使用 PagingToolbar 不論你使用哪種 Proxy 得到資料，後端的資料結構都應該是一個 JSON 格式  &lt;/p&gt;
+&lt;p&gt;JSON 裡面包含目前這個分頁要呈現的資料 &lt;code&gt;$returnResult[&amp;#39;rows&amp;#39;]&lt;/code&gt; 對應到 reader 的 root  &lt;/p&gt;
+&lt;p&gt;及全部的資料數量 &lt;code&gt;$returnResult[&amp;#39;results&amp;#39;]&lt;/code&gt; 對應到 reader 的 totalProperty  &lt;/p&gt;
+&lt;p&gt;讓 PagingToolbar 知道該如何分頁&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="extJS" scheme="http://yoursite.com/tags/extJS/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>測試</title>
+    <link href="http://yoursite.com/2018/09/18/test/"/>
+    <id>http://yoursite.com/2018/09/18/test/</id>
+    <published>2018-09-18T14:08:09.000Z</published>
+    <updated>2018-09-26T14:31:36.794Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="標題"><a href="#標題" class="headerlink" title="標題"></a>標題</h1><p>這是為了測試而存在的文章</p><a id="more"></a><h2 id="副標題"><a href="#副標題" class="headerlink" title="副標題"></a>副標題</h2><ol><li><p>測試一</p><blockquote><p>引用測試</p></blockquote></li><li><p>程式碼測試</p> <figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">phpinfo();</span><br></pre></td></tr></table></figure></li><li><p><code>exit;</code></p></li><li><p><em>斜體</em></p></li><li><p><strong>粗體</strong></p></li><li><p><strong><em>粗斜體</em></strong></p></li><li><p><del>刪除線</del></p></li></ol><ul><li style="list-style: none"><input type="checkbox" checked> @mentions, #refs, <a href="">links</a>, <strong>formatting</strong>, and <del>tags</del> supported</li><li style="list-style: none"><input type="checkbox" checked> list syntax required (any unordered or ordered list supported)</li><li style="list-style: none"><input type="checkbox" checked> this is a complete item</li><li style="list-style: none"><input type="checkbox"> this is an incomplete item</li></ul><div id="flowchart-0" class="flow-chart"></div><ol start="8"><li>備份後的發佈測試<script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.2.7/raphael.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/flowchart/1.6.5/flowchart.min.js"></script><textarea id="flowchart-0-code" style="display: none">st=>start: Startop=>operation: Your Operationcond=>condition: Yes or No?e=>endst->op->condcond(yes)->econd(no)->op</textarea><textarea id="flowchart-0-options" style="display: none">{"theme":"simple","scale":1,"line-width":2,"line-length":50,"text-margin":10,"font-size":12}</textarea><script>  var code = document.getElementById("flowchart-0-code").value;  var options = JSON.parse(decodeURIComponent(document.getElementById("flowchart-0-options").value));  var diagram = flowchart.parse(code);  diagram.drawSVG("flowchart-0", options);</script></li></ol>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;標題&quot;&gt;&lt;a href=&quot;#標題&quot; class=&quot;headerlink&quot; title=&quot;標題&quot;&gt;&lt;/a&gt;標題&lt;/h1&gt;&lt;p&gt;這是為了測試而存在的文章&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="test" scheme="http://yoursite.com/tags/test/"/>
+    
+  </entry>
+  
+</feed>
