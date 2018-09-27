@@ -81,18 +81,18 @@
 
 
 
-<meta name="description" content="先安裝 sitemap $ npm install hexo-generator-feed   查看根目錄下是否新增 /.deploy_git/sitemap.xml">
+<meta name="description" content="先安裝 sitemap  1$ npm install hexo-generator-feed  查看根目錄下是否新增 /.deploy_git/sitemap.xml">
 <meta name="keywords" content="google,hexo">
 <meta property="og:type" content="article">
 <meta property="og:title" content="hexo 驗證 google-site-verification">
 <meta property="og:url" content="https://iloveleon19.github.io/2018/09/27/google-site-verification/index.html">
 <meta property="og:site_name" content="iloveleon19">
-<meta property="og:description" content="先安裝 sitemap $ npm install hexo-generator-feed   查看根目錄下是否新增 /.deploy_git/sitemap.xml">
+<meta property="og:description" content="先安裝 sitemap  1$ npm install hexo-generator-feed  查看根目錄下是否新增 /.deploy_git/sitemap.xml">
 <meta property="og:locale" content="zh-tw">
 <meta property="og:updated_time" content="2018-09-27T14:43:25.162Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="hexo 驗證 google-site-verification">
-<meta name="twitter:description" content="先安裝 sitemap $ npm install hexo-generator-feed   查看根目錄下是否新增 /.deploy_git/sitemap.xml">
+<meta name="twitter:description" content="先安裝 sitemap  1$ npm install hexo-generator-feed  查看根目錄下是否新增 /.deploy_git/sitemap.xml">
 
 
 
@@ -344,41 +344,30 @@
 
       
         <ol>
-<li>先安裝 sitemap<pre><code class="console"> $ npm install hexo-generator-feed
-</code></pre>
+<li><p>先安裝 sitemap</p>
+ <figure class="highlight console"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> npm install hexo-generator-feed</span><br></pre></td></tr></table></figure>
 </li>
-<li>查看根目錄下是否新增 /.deploy_git/sitemap.xml<a id="more"></a></li>
+<li><p>查看根目錄下是否新增 /.deploy_git/sitemap.xml</p>
+<a id="more"></a></li>
 <li><p>根目錄下的 /_config.yml</p>
-<pre><code class="yml"> url: https://iloveleon19.github.io/
-</code></pre>
+ <figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">url:</span> <span class="attr">https://iloveleon19.github.io/</span></span><br></pre></td></tr></table></figure>
 </li>
 <li><p>根目錄下的 /themes/next/_config.yml</p>
-<pre><code class="yml"> menu:
-   home: / || home
-   # about: /about/ || user
-   tags: /tags/ || tags
-   categories: /categories/ || th
-   archives: /archives/ || archive
-   #schedule: /schedule/ || calendar
-   sitemap: /sitemap.xml || sitemap
-   #commonweal: /404/ || heartbeat
-</code></pre>
+ <figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">menu:</span></span><br><span class="line"><span class="attr">  home:</span> <span class="string">/</span> <span class="string">||</span> <span class="string">home</span></span><br><span class="line">  <span class="comment"># about: /about/ || user</span></span><br><span class="line"><span class="attr">  tags:</span> <span class="string">/tags/</span> <span class="string">||</span> <span class="string">tags</span></span><br><span class="line"><span class="attr">  categories:</span> <span class="string">/categories/</span> <span class="string">||</span> <span class="string">th</span></span><br><span class="line"><span class="attr">  archives:</span> <span class="string">/archives/</span> <span class="string">||</span> <span class="string">archive</span></span><br><span class="line">  <span class="comment">#schedule: /schedule/ || calendar</span></span><br><span class="line"><span class="attr">  sitemap:</span> <span class="string">/sitemap.xml</span> <span class="string">||</span> <span class="string">sitemap</span></span><br><span class="line">  <span class="comment">#commonweal: /404/ || heartbeat</span></span><br></pre></td></tr></table></figure>
 </li>
 <li><p>獲取 google site verification code</p>
 <ol>
-<li>登錄 Google Webmaster Tools，點擊至驗證方法，並選擇 HTML Tag。將會獲取到一段代碼：<pre><code class="html"> &lt;meta name=&quot;google-site-verification&quot; content=&quot;XXXXXXXXXXXXXXXXXXXXXXX&quot; /&gt;
-</code></pre>
- 將 content 裡面的 <code>XXXXXXXXXXXXXXXXXXXXXXX</code> 複製出來</li>
+<li><p>登錄 Google Webmaster Tools，點擊至驗證方法，並選擇 HTML Tag。將會獲取到一段代碼：</p>
+ <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"google-site-verification"</span> <span class="attr">content</span>=<span class="string">"XXXXXXXXXXXXXXXXXXXXXXX"</span> /&gt;</span></span><br></pre></td></tr></table></figure>
+<p> 將 content 裡面的 <code>XXXXXXXXXXXXXXXXXXXXXXX</code> 複製出來</p>
+</li>
 </ol>
 </li>
 <li><p>根目錄下的 /themes/next/_config.yml</p>
-<pre><code class="yml"> google_site_verification: XXXXXXXXXXXXXXXXXXXXXXX
-</code></pre>
+ <figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">google_site_verification:</span> <span class="string">XXXXXXXXXXXXXXXXXXXXXXX</span></span><br></pre></td></tr></table></figure>
 </li>
 <li><p>發佈到你的網站</p>
-<pre><code class="console">$ hexo d -g
-</code></pre>
-</li>
+<figure class="highlight console"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> hexo d -g</span><br></pre></td></tr></table></figure></li>
 </ol>
 
       
