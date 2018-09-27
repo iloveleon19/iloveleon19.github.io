@@ -348,10 +348,87 @@
 <p>及全部的資料數量 <code>$returnResult[&#39;results&#39;]</code> 對應到 reader 的 totalProperty  </p>
 <p>讓 PagingToolbar 知道該如何分頁</p>
 <a id="more"></a>
-<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// GetDBdata.php</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// ...</span></span><br><span class="line"><span class="comment">// some code to process data</span></span><br><span class="line"><span class="comment">// ...</span></span><br><span class="line"></span><br><span class="line">$returnResult[<span class="string">'rows'</span>] = $resultArray;</span><br><span class="line">$returnResult[<span class="string">'results'</span>] = $totalCount;</span><br><span class="line"></span><br><span class="line">$rtn = json_encode($returnResult);</span><br><span class="line"><span class="keyword">return</span> $rtn;</span><br></pre></td></tr></table></figure>
+<pre><code class="php">// GetDBdata.php
+
+// ...
+// some code to process data
+// ...
+
+$returnResult[&#39;rows&#39;] = $resultArray;
+$returnResult[&#39;results&#39;] = $totalCount;
+
+$rtn = json_encode($returnResult);
+return $rtn;
+</code></pre>
 <p>當使用 Ext.data.MemoryProxy 作為 store 的 proxy 時，要更新資料可以直接把資料寫入 store.proxy.data  </p>
 <p>再藉由 store.load() 刷新資料</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// main.js</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> limitRow = <span class="number">25</span>; <span class="comment">// server script should only send back 25 items at a time</span></span><br><span class="line"><span class="keyword">var</span> startRow = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> drawColumns = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    Ext.QuickTips.init();</span><br><span class="line">    Ext.QuickTips.getQuickTip().dismissDelay = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">    store = <span class="keyword">new</span> Ext.data.GroupingStore(&#123;</span><br><span class="line">        proxy: <span class="keyword">new</span> Ext.data.MemoryProxy(),</span><br><span class="line">        pageSize: limitRow,</span><br><span class="line">        reader: getReader(),</span><br><span class="line">        sortInfo: &#123; <span class="attr">field</span>: <span class="string">'date'</span>, <span class="attr">direction</span>: <span class="string">'DESC'</span> &#125;,</span><br><span class="line">        enablePaging: <span class="literal">true</span></span><br><span class="line">    &#125;);</span><br><span class="line"></span><br><span class="line">     grid = <span class="keyword">new</span> Ext.grid.GridPanel(&#123;</span><br><span class="line">            tbar: <span class="keyword">new</span> Ext.PagingToolbar(&#123;</span><br><span class="line">            store: store,       <span class="comment">// grid and PagingToolbar using same store</span></span><br><span class="line">            displayInfo: <span class="literal">true</span>,</span><br><span class="line">            pageSize: limitRow,</span><br><span class="line">            prependButtons: <span class="literal">true</span>,</span><br><span class="line">            listeners: &#123;</span><br><span class="line">                beforechange: <span class="function"><span class="keyword">function</span>(<span class="params">pagingtoolbar,pageData</span>)</span>&#123; <span class="comment">// 點擊換頁時再去要資料</span></span><br><span class="line">                    startRow = pageData.start;</span><br><span class="line">                    limitRow = pageData.limit;</span><br><span class="line">                    doGetData();</span><br><span class="line">                &#125;,</span><br><span class="line">                <span class="comment">// change: function(pagingtoolbar,pageData)&#123;</span></span><br><span class="line">                <span class="comment">// &#125;,</span></span><br><span class="line">            &#125;,</span><br><span class="line">        &#125;),</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> getReader = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> r = [<span class="string">'id'</span>,<span class="string">'name'</span>,<span class="string">'date'</span>];</span><br><span class="line">    <span class="keyword">var</span> reader = <span class="keyword">new</span> Ext.data.JsonReader(&#123;</span><br><span class="line">        root: <span class="string">'rows'</span>,</span><br><span class="line">        totalProperty:<span class="string">'results'</span>,</span><br><span class="line">        fields: r,</span><br><span class="line">    &#125;);</span><br><span class="line">    <span class="keyword">return</span> reader;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> doGetData = <span class="function"><span class="keyword">function</span>(<span class="params">jdata</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> p = &#123;</span><br><span class="line">        <span class="string">"uid"</span>       : uid,</span><br><span class="line">        <span class="string">"startRow"</span>  : startRow,</span><br><span class="line">        <span class="string">"limitRow"</span>  : limitRow,</span><br><span class="line">    &#125;;</span><br><span class="line">    MyFunction.Send(<span class="string">"GetDBdata"</span>, p, LoadData, <span class="keyword">this</span>); <span class="comment">// 到 GetDBdata.php 取得資料，交給 LoadData 載入資料</span></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> LoadData = <span class="function"><span class="keyword">function</span>(<span class="params">jdata</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> ds = jdata || [];</span><br><span class="line">    store.proxy.data = ds;</span><br><span class="line">    store.load(&#123;</span><br><span class="line">        params: &#123;</span><br><span class="line">            <span class="comment">// specify params for the first page load if using paging</span></span><br><span class="line">            start: startRow,</span><br><span class="line">            limit: limitRow,</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<pre><code class="javascript">// main.js
+
+var limitRow = 25; // server script should only send back 25 items at a time
+var startRow = 0;
+
+var drawColumns = function() {
+    Ext.QuickTips.init();
+    Ext.QuickTips.getQuickTip().dismissDelay = 0;
+
+    store = new Ext.data.GroupingStore({
+        proxy: new Ext.data.MemoryProxy(),
+        pageSize: limitRow,
+        reader: getReader(),
+        sortInfo: { field: &#39;date&#39;, direction: &#39;DESC&#39; },
+        enablePaging: true
+    });
+
+     grid = new Ext.grid.GridPanel({
+            tbar: new Ext.PagingToolbar({
+            store: store,       // grid and PagingToolbar using same store
+            displayInfo: true,
+            pageSize: limitRow,
+            prependButtons: true,
+            listeners: {
+                beforechange: function(pagingtoolbar,pageData){ // 點擊換頁時再去要資料
+                    startRow = pageData.start;
+                    limitRow = pageData.limit;
+                    doGetData();
+                },
+                // change: function(pagingtoolbar,pageData){
+                // },
+            },
+        }),
+    });
+};
+
+var getReader = function() {
+    var r = [&#39;id&#39;,&#39;name&#39;,&#39;date&#39;];
+    var reader = new Ext.data.JsonReader({
+        root: &#39;rows&#39;,
+        totalProperty:&#39;results&#39;,
+        fields: r,
+    });
+    return reader;
+};
+
+var doGetData = function(jdata) {
+    var p = {
+        &quot;uid&quot;       : uid,
+        &quot;startRow&quot;  : startRow,
+        &quot;limitRow&quot;  : limitRow,
+    };
+    MyFunction.Send(&quot;GetDBdata&quot;, p, LoadData, this); // 到 GetDBdata.php 取得資料，交給 LoadData 載入資料
+};
+
+var LoadData = function(jdata) {
+    var ds = jdata || [];
+    store.proxy.data = ds;
+    store.load({
+        params: {
+            // specify params for the first page load if using paging
+            start: startRow,
+            limit: limitRow,
+        }
+    });
+};
+</code></pre>
 
       
     </div>
