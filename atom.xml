@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://iloveleon19.github.io/"/>
-  <updated>2018-12-22T07:09:36.606Z</updated>
+  <updated>2018-12-22T07:11:50.995Z</updated>
   <id>https://iloveleon19.github.io/</id>
   
   <author>
@@ -21,12 +21,12 @@
     <link href="https://iloveleon19.github.io/2018/12/22/angular-ui-bootstrap-s-popover-outsideClick/"/>
     <id>https://iloveleon19.github.io/2018/12/22/angular-ui-bootstrap-s-popover-outsideClick/</id>
     <published>2018-12-22T05:36:36.000Z</published>
-    <updated>2018-12-22T07:09:36.606Z</updated>
+    <updated>2018-12-22T07:11:50.995Z</updated>
     
     <summary type="html">
     
       &lt;p&gt; angular-ui-bootstrap 在 1.0 版本之前是沒有  outsideClick 觸發器的&lt;/p&gt;
-&lt;p&gt; 所以要自己寫一個&lt;br&gt;
+&lt;p&gt; 所以要自己寫一個&lt;/p&gt;
     
     </summary>
     
