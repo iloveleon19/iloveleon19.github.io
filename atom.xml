@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://iloveleon19.github.io/"/>
-  <updated>2018-09-27T22:59:11.595Z</updated>
+  <updated>2018-12-22T06:44:58.117Z</updated>
   <id>https://iloveleon19.github.io/</id>
   
   <author>
@@ -17,11 +17,28 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>angular-ui-bootstrap 的 popover 的 outsideClick 觸發器</title>
+    <link href="https://iloveleon19.github.io/2018/12/22/angular-ui-bootstrap-s-popover-outsideClick/"/>
+    <id>https://iloveleon19.github.io/2018/12/22/angular-ui-bootstrap-s-popover-outsideClick/</id>
+    <published>2018-12-22T05:36:36.000Z</published>
+    <updated>2018-12-22T06:44:58.117Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt; angular-ui-bootstrap 在 1.0 版本之前是沒有  outsideClick 觸發器的&lt;/p&gt;
+&lt;p&gt; 所以要自己寫一個&lt;br&gt;
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
     <title>hexo 驗證 google-site-verification</title>
     <link href="https://iloveleon19.github.io/2018/09/27/google-site-verification/"/>
     <id>https://iloveleon19.github.io/2018/09/27/google-site-verification/</id>
-    <published>2018-09-27T14:08:24.000Z</published>
-    <updated>2018-09-27T22:59:11.595Z</updated>
+    <published>2018-09-27T22:08:24.000Z</published>
+    <updated>2018-12-17T16:11:50.188Z</updated>
     
     <summary type="html">
     
@@ -44,8 +61,8 @@
     <title>hexo 的 閱讀全文 設置</title>
     <link href="https://iloveleon19.github.io/2018/09/24/hexo-read-more/"/>
     <id>https://iloveleon19.github.io/2018/09/24/hexo-read-more/</id>
-    <published>2018-09-24T15:31:45.000Z</published>
-    <updated>2018-09-27T14:07:11.041Z</updated>
+    <published>2018-09-24T23:31:45.000Z</published>
+    <updated>2018-12-17T16:11:51.516Z</updated>
     
     <summary type="html">
     
@@ -70,8 +87,8 @@
     <title>extJS 3.4：PagingToolbar 搭配 MemoryProxy</title>
     <link href="https://iloveleon19.github.io/2018/09/24/extJS-PagingToolbar/"/>
     <id>https://iloveleon19.github.io/2018/09/24/extJS-PagingToolbar/</id>
-    <published>2018-09-24T02:21:01.000Z</published>
-    <updated>2018-09-24T14:39:33.896Z</updated>
+    <published>2018-09-24T10:21:01.000Z</published>
+    <updated>2018-12-17T16:11:49.536Z</updated>
     
     <summary type="html">
     
@@ -91,8 +108,8 @@
     <title>測試</title>
     <link href="https://iloveleon19.github.io/2018/09/18/test/"/>
     <id>https://iloveleon19.github.io/2018/09/18/test/</id>
-    <published>2018-09-18T14:08:09.000Z</published>
-    <updated>2018-09-26T14:31:36.794Z</updated>
+    <published>2018-09-18T22:08:09.000Z</published>
+    <updated>2018-12-17T16:11:52.176Z</updated>
     
     <summary type="html">
     
@@ -109,8 +126,8 @@
     <title>Hello World</title>
     <link href="https://iloveleon19.github.io/2018/09/18/hello-world/"/>
     <id>https://iloveleon19.github.io/2018/09/18/hello-world/</id>
-    <published>2018-09-17T16:00:00.000Z</published>
-    <updated>2018-09-27T14:07:26.973Z</updated>
+    <published>2018-09-18T00:00:00.000Z</published>
+    <updated>2018-12-17T16:11:50.860Z</updated>
     
     <summary type="html">
     
