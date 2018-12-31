@@ -1,13 +1,15 @@
 ---
 title: angular-ui-bootstrap 的 popover 的 outsideClick 觸發器
 date: 2018-12-22 05:36:36
-tags:
+tags: angularjs
 ---
 
  angular-ui-bootstrap 在 1.0 版本之前是沒有  outsideClick 觸發器的
 
  所以要自己寫一個
+
 <!--more-->
+
 javascript 註冊一個全局自定義指令
 ```javascript
 .directive('clickOutside', function ($parse, $timeout) {
